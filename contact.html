@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact</title>
+</head>
+<body onload="setActiveLink()">
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Site Logo" id="logo">
+            <h1><a class="a1" href="index.html" id="home">Sitename</a></h1>
+        </div>
+        <nav>
+            <a class="a2" href="contact.html" id="contact">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+        <p class="info-paragraph">Some text in paragraph</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="genre">Favourite Genre:</label>
+            <input type="text" id="genre" name="genre" list="genres">
+            <datalist id="genres">
+                <option value="Rock">
+                <option value="Pop">
+                <option value="Jazz">
+                <option value="Classical">
+            </datalist>
+            <br>
+            
+            <label>
+                <input type="checkbox" name="newsletter"> Subscribe to our newsletter via email
+            </label><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    
+    <footer>
+        <p>Footer text in small</p>
+        <p>All rights reserved</p>
+    </footer>
+    <script type="text/javascript">
+        function setActiveLink() {
+            const path = window.location.pathname;
+            const page = path.split("/").pop();
+            if (page === "index.html" || page === "") {
+                document.getElementById("home").classList.add("active");
+            } else if (page === "contact.html") {
+                document.getElementById("contact").classList.add("active");
+            }
+        }
+    </script>
+</body>
+</html>

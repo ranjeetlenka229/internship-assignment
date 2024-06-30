@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Website name</title>
+</head>
+<body onload="setActiveLink()">
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Site Logo" id="logo">
+            <h1><a class="a1" href="index.html" id="home">Sitename</a></h1>
+        </div>
+        <nav>
+            <a class="a2" href="contact.html" id="contact">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="welcome">
+            <h2>Welcome to the Site</h2>
+            <p>Message</p>
+        </section>
+        
+        <section id="content">
+            <div class="content-block">
+                <div>
+                    <p>Any long text paragraph</p>
+                </div>
+                <div>
+                    <img src="image1.jpg" alt="Image 1">
+                </div>
+            </div>
+            <div class="content-block">
+                <div>
+                    <img src="image2.jpg" alt="Image 2">
+                </div>
+                <div>
+                    <p>Any long text paragraph</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="video">
+            <iframe width="556" height="313" src="https://www.youtube.com/embed/cW_UUjMDmo4" title="Position HTML Elements Side by Side with CSS - How to Align Elements Side by Side with CSS?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Footer text in small</p>
+        <p>All rights reserved</p>
+    </footer>
+    <script type="text/javascript">
+        function setActiveLink() {
+            const path = window.location.pathname;
+            const page = path.split("/").pop();
+            if (page === "index.html" || page === "") {
+                document.getElementById("home").classList.add("active");
+            } else if (page === "contact.html") {
+                document.getElementById("contact").classList.add("active");
+            }
+        }
+    </script>
+</body>
+</html>
