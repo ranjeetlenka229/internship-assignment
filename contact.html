@@ -9,7 +9,7 @@
 <body onload="setActiveLink()">
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="Site Logo" id="logo">
+            <img src="logo.jpeg" alt="Site Logo" id="logo">
             <h1><a class="a1" href="index.html" id="home">Sitename</a></h1>
         </div>
         <nav>
@@ -20,27 +20,42 @@
     <main>
         <p class="info-paragraph">Some text in paragraph</p>
         <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name"><br>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br>
-
-            <label for="genre">Favourite Genre:</label>
-            <input type="text" id="genre" name="genre" list="genres">
-            <datalist id="genres">
-                <option value="Rock">
-                <option value="Pop">
-                <option value="Jazz">
-                <option value="Classical">
-            </datalist>
-            <br>
-            
-            <label>
-                <input type="checkbox" name="newsletter"> Subscribe to our newsletter via email
-            </label><br>
-            
-            <input type="submit" value="Submit">
+            <table>
+                <tr>
+                    <th>Name:</th>
+                    <td><input type="text" id="name" name="name" class="full-width"></td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td><input type="email" id="email" name="email" class="full-width"></td>
+                </tr>
+                <tr>
+                    <th>Favourite Genre:</th>
+                    <td>
+                        <input type="text" id="genre" name="genre" list="genres" class="full-width">
+                        <datalist id="genres">
+                            <option value="Rock">
+                            <option value="Pop">
+                            <option value="Jazz">
+                            <option value="Classical">
+                        </datalist>
+                        <p>List input (visit the link for more info on how to create list type input)</p>
+                        <a href="https://www.w3schools.com/tags/att_input_list.asp">https://www.w3schools.com/tags/att_input_list.asp</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <label>
+                            <input type="checkbox" id="newsletter" name="newsletter"> Subscribe to our newsletter via email
+                        </label>
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="2" class="submit-cell">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
         </form>
     </main>
     
